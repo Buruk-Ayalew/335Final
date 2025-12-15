@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Weather</title>
+  <link rel="stylesheet" href="/public/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Travel Weather App</h1>
+
+  <form action="/trips" method= "POST" >
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="text" name="city" placeholder="City" required>
+    <input type="text" name="country" placeholder="Country" required>
+    <button type="submit">Get Weather</button>
+  </form>
+
+  <% if (name && city && country) { %>
+    <div class="results">
+      <h2>Hello <%= name %></h2>
+      <p>Destination: <%= city %>, <%= country %></p>
+
+      <% if (weather) { %>
+        <% if (weather.error) { %>
+          <p><%= weather.error %></p>
+        <% } else { %>
+          <p>Temperature: <%= weather.temperature %>°C</p>
+          <p>Feels like: <%= weather.feelsLike %>°C</p>
+        <% } %>
+      <% } %>
+    </div>
+  <% } %>
+
+</body>
+</html>
