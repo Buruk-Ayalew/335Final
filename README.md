@@ -1,5 +1,5 @@
 # 335Final
-#Submitted by: Rose Smith (superterp)
+#Submitted by: Rose Smith (superterp)/n
             #Group Members: Rose Smith (superterp), Peter Santos (pmegaterp)
             #App Description: Allow users to find images, songs of an author, and store/retrieve the results.
             #YouTube Video Link: https://www.youtube.com/MyAmazingAPP
