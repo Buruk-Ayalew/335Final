@@ -1,4 +1,4 @@
-**Submitted by:** __
+**Submitted by:**\
 **Group Members:** Dinna Yeshitlla (dinyeshi), Miskay Zelalem (mzelalem), Buruk Ayalew (bayalew)
 **App Description:** Allow users to find images, songs of an author, and store/retrieve the results.
 **YouTube Video Link:**  
