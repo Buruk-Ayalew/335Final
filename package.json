@@ -1,28 +1,70 @@
 {
+  
   "name": "335final",
+  
   "version": "1.0.0",
+  
   "description": "Submitted by: Rose Smith (superterp)   Group Members: Rose Smith (superterp), Peter Santos (pmegaterp)   App Description: Allow users to find images, songs of an author, and store/retrieve the results.   YouTube Video Link: https://www.youtube.com/MyAmazingAPP   APIs: VideoApp (http:notrealvideoapp.what), SoundApp (http:notreadlsoundapp.what)   Contact Email:  superterp@notreal.address.what   Deployed App Link: https://notreal.what.terpNel/myApp",
+  
   "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  
   },
+  
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Buruk-Ayalew/335Final.git"
+  
+    
+  "type": "git",
+  
+    
+  "url": "git+https://github.com/Buruk-Ayalew/335Final.git"
+  
   },
+  
   "keywords": [],
+  
   "author": "",
+  
   "license": "ISC",
+  
   "type": "commonjs",
+  
   "bugs": {
-    "url": "https://github.com/Buruk-Ayalew/335Final/issues"
+  
+    
+  "url": "https://github.com/Buruk-Ayalew/335Final/issues"
+  
   },
+  
   "homepage": "https://github.com/Buruk-Ayalew/335Final#readme",
+  
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "ejs": "^3.1.10",
-    "express": "^5.2.1",
-    "mongoose": "^9.0.1",
-    "node-fetch": "^2.7.0"
+  
+    
+  "dotenv": "^17.2.3",
+  
+    
+  "ejs": "^3.1.10",
+  
+    
+  "express": "^5.2.1",
+  
+    
+  "mongoose": "^9.0.1",
+  
+    
+  "node-fetch": "^2.7.0"
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "nodemon": "^3.1.11"
+  
   }
 }
