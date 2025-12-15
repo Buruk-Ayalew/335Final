@@ -1,8 +1,8 @@
 # 335Final
-Submitted by: Rose Smith (superterp)  
-Group Members: Rose Smith (superterp), Peter Santos (pmegaterp)  
+Submitted by: ---------
+Group Members: Dinna Yeshitlla (dinyeshi), Miskay Zelalem (mzelalem), Buruk Ayalew (bayalew) 
 App Description: Allow users to find images, songs of an author, and store/retrieve the results.  
-YouTube Video Link: https://www.youtube.com/MyAmazingAPP  
-APIs: VideoApp (http:notrealvideoapp.what), SoundApp (http:notreadlsoundapp.what)  
-Contact Email:  superterp@notreal.address.what  
-Deployed App Link: https://notreal.what.terpNel/myApp  
+YouTube Video Link: -------
+APIs: weatherstack (https://weatherstack.com/)
+Contact Email: dinyeshi@terpmail.umd.edu 
+Deployed App Link: -------
