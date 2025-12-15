@@ -1,5 +1,3 @@
-
-
 body {
   background-color: #eef2f7;
   color: #222;
@@ -15,6 +13,11 @@ form {
 input {
   padding: 8px;
   margin: 5px;
+}
+
+button {
+  padding: 8px 14px;
+  cursor: pointer;
 }
 
 .results {

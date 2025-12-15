@@ -1,17 +1,12 @@
-app.set("view engine", "ejs");
-
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
-app.get("/preview", (req, res) => {
-    res.render("index", {
-      name: "Dinna",
-      city: "Paris",
-      country: "France",
-      weather: {
-        temperature: 18,
-        feelsLike: 16
-      }
-    });
-  });
+/**
+ * server.js
+ *
+ * Entry point for the Node.js / Express application.
+ *
+ * Responsibilities of this file:
+ * - Initialize the Express app
+ * - Configure middleware (body parsing, static files, etc.)
+ * - Connect to MongoDB using Mongoose
+ * - Register route handlers (e.g., /trips)
+ * - Start the server with app.listen()
+ * */
