@@ -1,49 +1,36 @@
+const express = require("express");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const path = require("path");
 
-const express = require('express');
-const dotenv = require('dotenv');
-
-dotenv.config({path : './.env'});
-const mongoose = require('mongoose');
+dotenv.config();
 
 const app = express();
 
-const getWeather = require('./api/weather');
-
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
+app.set("view engine", "ejs");
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connected'))
+  .then(() => console.log("MongoDB connected"))
   .catch(err => console.error(err));
 
-const tripSchema = new mongoose.Schema({
-  name: String,
-  city: String,
-  country: String,
-  createdAt: { type: Date, default: Date.now }
-});
 
-const Trip = mongoose.model('Trip', tripSchema);
+const tripsRouter = require("./routes/trips");
+app.use("/trips", tripsRouter);
 
-
-app.set('view engine', 'ejs');
-
-app.get('/', (req, res) => {
-  res.render('index');
-});
-
-app.post('/trips', async (req, res) => {
-    const { name, city, country } = req.body;
-
-    const newTrip = new Trip({ name, city, country });
-    await newTrip.save();
-
-    const weather = await getWeather(city, country);
-    res.render('index', { name, city, country, weather });
+app.get("/", (req, res) => {
+  res.render("index", {
+    name: null,
+    city: null,
+    country: null,
+    weather: null
+  });
 });
 
 
 const PORT = 3001;
-app.listen(PORT, () => { console.log(`Web server started and running at http://localhost:${PORT}`);});
-
+app.listen(PORT, () => {
+  console.log(`Web server started and running at http://localhost:${PORT}`);
+});
