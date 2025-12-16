@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.post('/trip', async (req, res) => {
+app.post('/trips', async (req, res) => {
     const { name, city, country } = req.body;
 
     const newTrip = new Trip({ name, city, country });
